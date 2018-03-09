@@ -3,16 +3,18 @@ header('Content-type: application/json');
 
 $valueType = $_GET['valueType'];
 
+$response = [];
+
 if(preg_match('/^[\d]+$/', $valueType)){
-    $response = "Dane liczbowe";
+    $response[] = "Dane liczbowe";
 }
 
 else if($valueType == ""){
-    $response = "Nie podano żadnej wartości";
+    $response []= "Nie podano żadnej wartości";
 }
 
 else {
-    $response = "Dane tekstowe";
+    $response []= "Dane tekstowe";
 }
 echo json_encode($response);
 

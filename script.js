@@ -13,6 +13,7 @@ $('button').on("click", function(e){
         },
         success: function(response){
             $('#result').html(response);
+            console.log(response);
         },
         error: function(xhr){
             console.log(xhr);
